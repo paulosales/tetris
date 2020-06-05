@@ -11,16 +11,22 @@
     "build": "webpack --config webpack.config.dev.js --env.development",
     "build-prod": "webpack --config webpack.config.prod.js --env.production",
     "lint": "eslint src/*.ts",
-    "prettier": "pretty-quick"
+    "prettier": "pretty-quick",
+    "test": "jest --watchAll true",
+    "test:coverage": "jest --watchAll false --coverage",
+    "test:commit": "jest --watchAll false"
   },
   "devDependencies": {
+    "@types/jest": "^25.2.3",
     "@typescript-eslint/eslint-plugin": "^3.0.2",
     "@typescript-eslint/parser": "^3.0.2",
     "eslint": "^7.1.0",
     "eslint-config-prettier": "^6.11.0",
     "husky": "^4.2.5",
+    "jest": "^26.0.1",
     "prettier": "^2.0.5",
     "pretty-quick": "^2.0.1",
+    "ts-jest": "^26.1.0",
     "ts-loader": "^7.0.5",
     "typescript": "^3.9.3",
     "webpack": "^4.43.0",
@@ -34,7 +40,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged && eslint src/*.ts"
+      "pre-commit": "pretty-quick --staged && eslint src/*.ts && jest --watchAll false"
     }
   }
 }

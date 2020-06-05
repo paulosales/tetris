@@ -60,6 +60,18 @@ class Matrix<T> {
     });
   }
 
+  toString(): string {
+    const strRows = new Array<string>();
+    this.data.forEach((row) => {
+      const strCols = new Array<string>();
+      row.forEach((value) => {
+        strCols.push(value.toString());
+      });
+      strRows.push(strCols.join(" "));
+    });
+    return strRows.join("\n");
+  }
+
   get(row: number, col: number): T {
     return this.data[row][col];
   }
