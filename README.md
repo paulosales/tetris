@@ -1,4 +1,4 @@
-# tetris - [![Build Status](https://travis-ci.com/paulosales/tetris.svg?branch=master)](https://travis-ci.com/paulosales/tetris)
+# tetris - [![Build Status](https://travis-ci.com/paulosales/tetris.svg?branch=dev)](https://travis-ci.com/paulosales/tetris) [![codecov](https://codecov.io/gh/paulosales/tetris/branch/dev/graph/badge.svg)](https://codecov.io/gh/paulosales/tetris)
 
 ## Demo
 
