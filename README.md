@@ -1,4 +1,4 @@
-# tetris
+# tetris - [![Build Status](https://travis-ci.com/paulosales/tetris.svg?branch=master)](https://travis-ci.com/paulosales/tetris)
 
 ## Demo
 
