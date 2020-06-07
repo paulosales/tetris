@@ -28,7 +28,7 @@ abstract class Piece implements KeyboardListener, ClockListener {
     clock.addClockListener(this);
   }
 
-  drop(): void {
+  private drop(): void {
     this.pos.y++;
     this.timeCounter = 0;
     if (this.isCollided()) {
@@ -41,7 +41,7 @@ abstract class Piece implements KeyboardListener, ClockListener {
     }
   }
 
-  isCollided(): boolean {
+  private isCollided(): boolean {
     const [pDim, aDim, aMatrix] = [
       this.matrix.getDimension(),
       this.arena.getMatrix().getDimension(),
@@ -62,7 +62,7 @@ abstract class Piece implements KeyboardListener, ClockListener {
     return false;
   }
 
-  reset(): void {
+  private reset(): void {
     this.pos.y = 0;
     this.pos.x =
       ((this.arena.getMatrix().getDimension().width / 2) | 0) -
@@ -83,14 +83,14 @@ abstract class Piece implements KeyboardListener, ClockListener {
     });
   }
 
-  move(direction: HorizontalDirection): void {
+  private move(direction: HorizontalDirection): void {
     this.pos.x += direction;
     if (this.isCollided()) {
       this.pos.x -= direction;
     }
   }
 
-  rotate(direction: RotateDirection): void {
+  private rotate(direction: RotateDirection): void {
     this.matrix.rotate(direction);
   }
 

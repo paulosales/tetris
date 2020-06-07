@@ -20,6 +20,10 @@ class Keyboard {
     this.listeners.delete(listener);
   }
 
+  removeAllListeners(): void {
+    this.listeners.clear();
+  }
+
   private doKeyDown(key: KeyboardKey): void {
     this.listeners.forEach((listener) => {
       listener.onKeyDown(key);

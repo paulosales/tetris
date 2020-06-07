@@ -3,6 +3,7 @@ import Dimension from "../common/dimension";
 import COLORS from "../common/colors";
 import Piece from "../pieces/piece";
 import Point from "../common/point";
+import ArenaListener from "./arena-listener";
 import PieceT from "../pieces/piece-t";
 import PieceL from "../pieces/piece-l";
 import PieceJ from "../pieces/piece-j";
@@ -70,8 +71,6 @@ class Arena {
       case 6:
         this.piece = new PieceI(this);
         break;
-      default:
-        this.piece = new PieceT(this);
     }
   }
 

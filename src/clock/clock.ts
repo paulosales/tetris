@@ -17,6 +17,10 @@ class Clock {
     this.listeners.delete(listener);
   }
 
+  removeAllListeners(): void {
+    this.listeners.clear();
+  }
+
   private tick(time = 0) {
     this.doTick(time);
     requestAnimationFrame(this.tick);

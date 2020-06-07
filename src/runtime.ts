@@ -1,6 +1,7 @@
 import Arena from "./arena/arena";
 import ClockListener from "./clock/clock-listener";
 import clock from "./clock/clock";
+import ArenaListener from "./arena/arena-listener";
 
 class Runtime implements ClockListener, ArenaListener {
   private canvas: HTMLCanvasElement;
