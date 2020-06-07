@@ -1,6 +1,6 @@
 import { JSDOM } from "jsdom";
 
-const dom = new JSDOM("<canvas id='display'></canvas>");
+const dom = new JSDOM("<div id='score'></div><canvas id='tetris'></canvas>");
 global.document = dom.window.document;
 global.window = dom.window;
 

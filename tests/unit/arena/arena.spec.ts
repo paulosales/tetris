@@ -25,7 +25,7 @@ describe("Arena", () => {
   let context: CanvasRenderingContext2D;
 
   beforeAll(() => {
-    canvas = <HTMLCanvasElement>window.document.getElementById("display");
+    canvas = <HTMLCanvasElement>window.document.getElementById("tetris");
     context = canvas.getContext("2d");
   });
 
@@ -38,14 +38,14 @@ describe("Arena", () => {
     jest.clearAllMocks();
   });
 
-  describe("when create a arena", () => {
-    it("should instances successfuly the object", () => {
+  describe("when creating an arena", () => {
+    it("should instances successfully the object", () => {
       const arena = new Arena();
       expect(arena).not.toBeUndefined();
     });
   });
 
-  describe("when draw at time 0", () => {
+  describe("when drawing at time 0", () => {
     it("should render the arena with one no one merged piece.", () => {
       const arena = new Arena();
       expect(arena).not.toBeNull();
@@ -55,7 +55,7 @@ describe("Arena", () => {
     });
   });
 
-  describe("when draw with a merged piece", () => {
+  describe("when drawing with a merged piece", () => {
     it("should draw the merged piece in the arena", () => {
       const arena = new Arena();
       expect(arena).not.toBeNull();
@@ -117,8 +117,8 @@ describe("Arena", () => {
     });
   });
 
-  describe("when get the arena matrix", () => {
-    it("should returns a 12 x 20 matrix", () => {
+  describe("when getting the arena matrix", () => {
+    it("should return a 12 x 20 matrix", () => {
       const arena = new Arena();
       expect(arena).not.toBeUndefined();
 
@@ -129,8 +129,8 @@ describe("Arena", () => {
     });
   });
 
-  describe("when the row 19 are filled and sweep is invoked", () => {
-    it("should remove the row 19, unshift a new row at beginning, and call the onSweep event.", () => {
+  describe("when row 19 is filled and sweep is invoked", () => {
+    it("should remove row 19, unshift a new row at the beginning, and call the onSweep event.", () => {
       const arena = new Arena();
       const arenaListener = new ArenaListenerImpl();
       arena.addListener(arenaListener);
@@ -169,7 +169,7 @@ describe("Arena", () => {
   });
 
   describe("when clear the area", () => {
-    it("should set zero the the all arena matrix elements and call clean event.", () => {
+    it("should set zero to all arena matrix elements and call clean event.", () => {
       const arena = new Arena();
       const arenaListener = new ArenaListenerImpl();
       arena.addListener(arenaListener);

@@ -3,7 +3,7 @@ import ClockListenerImpl from "../helpers/clock-listener-impl";
 import { animationFrameCallback } from "../helpers/jsdom-jest-setup";
 
 describe("Clock", () => {
-  describe("when attach a clock listener and throw 2 ticks in the clock", () => {
+  describe("when attaching a clock listener and throw 2 ticks in the clock", () => {
     it("should raise the onTick event 2 times", () => {
       const clockListener = new ClockListenerImpl();
       clock.addClockListener(clockListener);
