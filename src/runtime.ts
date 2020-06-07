@@ -1,6 +1,7 @@
 import Arena from "./arena/arena";
 import ClockListener from "./clock/clock-listener";
 import clock from "./clock/clock";
+import ArenaListener from "./arena/arena-listener";
 
 class Runtime implements ClockListener, ArenaListener {
   private canvas: HTMLCanvasElement;
@@ -13,8 +14,6 @@ class Runtime implements ClockListener, ArenaListener {
     this.canvas = canvas;
     this.context = canvas.getContext("2d");
     this.context.scale(20, 20);
-
-    clock.addClockListener(this);
   }
 
   private draw(): void {
@@ -45,6 +44,7 @@ class Runtime implements ClockListener, ArenaListener {
   run(): void {
     this.arena = new Arena();
     this.arena.addListener(this);
+    clock.addClockListener(this);
     this.updateScore();
   }
 }
