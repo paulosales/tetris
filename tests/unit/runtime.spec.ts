@@ -67,7 +67,7 @@ describe("Runtime", () => {
   });
 
   describe("when the arena sweeps the second row", () => {
-    it("should increment the score to 30", () => {
+    it("should increment the score to 20", () => {
       const canvas = <HTMLCanvasElement>(
         window.document.getElementById("tetris")
       );
@@ -77,7 +77,7 @@ describe("Runtime", () => {
       runtime.onSweep();
       runtime.onSweep();
 
-      expect(document.getElementById("score").innerText).toBe("30");
+      expect(document.getElementById("score").innerText).toBe("20");
     });
   });
 
