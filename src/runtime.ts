@@ -7,7 +7,6 @@ class Runtime implements ClockListener, ArenaListener {
   private canvas: HTMLCanvasElement;
   private context: CanvasRenderingContext2D;
   private arena: Arena;
-  private scoreFactor = 1;
   private score = 0;
 
   constructor(canvas: HTMLCanvasElement) {
@@ -27,8 +26,7 @@ class Runtime implements ClockListener, ArenaListener {
   }
 
   onSweep(): void {
-    this.score += 10 * this.scoreFactor;
-    this.scoreFactor *= 2;
+    this.score += 10;
     this.updateScore();
   }
 
