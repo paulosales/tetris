@@ -1,24 +1,72 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
+    <meta charset="utf-8" />
     <title>Tetris</title>
-    <style>
-      body {
-        background-color: #202028;
-        color: #fff;
-        font-family: sans-serif;
-        font-size: 2em;
-        text-align: center;
-      }
+    <meta name="description" content="A tetris webapp game." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="canonical" href="https://tetris.paulosales.com.br" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/site.webmanifest" />
+    <link rel="icon" sizes="192x192" href="assets/android-chrome-192x192.png" />
+    <link rel="apple-touch-icon" href="assets/android-chrome-192x192.png" />
+    <meta
+      name="msapplication-TileImage"
+      content="assets/android-chrome-144x144.png"
+    />
+    <meta name="theme-color" content="#2196F3" />
+    <meta property="og:title" content="Tetris" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://tetris.paulosales.com.br/assets/android-chrome-192x192.png"
+    />
+    <meta property="og:url" content="https://tetris.paulosales.com.br/" />
+    <meta property="og:description" content="A tetris webapp game." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:url" content="https://tetris.paulosales.com.br/" />
+    <meta name="twitter:title" content="Tetris" />
+    <meta name="twitter:description" content="A tetris webapp game." />
+    <meta
+      name="twitter:image"
+      content="https://tetris.paulosales.com.br/assets/android-chrome-192x192.png"
+    />
+    <meta name="twitter:creator" content="@prsales" />
 
-      canvas {
-        border: solid 0.2em #fff;
-        height: 90vh;
-      }
-    </style>
+    <link
+      rel="stylesheet"
+      href="assets/font-awesome/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="assets/tetris.css" />
   </head>
   <body>
-    <div id="score"></div>
-    <canvas id="tetris" width="240" height="400"></canvas>
-    <script src="tetris.js"></script>
+    <div id="screen">
+      <div id="score"></div>
+      <canvas id="tetris" width="240" height="400"></canvas>
+      <div id="joystick">
+        <div id="rotate-counterclockwise" class="fa fa-undo"></div>
+        <div id="rotate-clockwise" class="fa fa-repeat"></div>
+        <div id="move-left" class="fa fa-chevron-left"></div>
+        <div id="move-down" class="fa fa-chevron-down"></div>
+        <div id="move-right" class="fa fa-chevron-right"></div>
+      </div>
+      <script src="tetris.js"></script>
+    </div>
   </body>
 </html>

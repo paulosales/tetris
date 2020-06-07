@@ -5,7 +5,6 @@ import PieceZ from "../../../src/pieces/piece-z";
 import Arena from "../../../src/arena/arena";
 import Dimension from "../../../src/common/dimension";
 import Matrix from "../../../src/matrix/matrix";
-import KeyboardEventImpl from "../keyboard/keyboard-event-impl";
 import KeyboardKey from "../../../src/keyboard/keyboard-key";
 import keyboard from "../../../src/keyboard/keyboard";
 import RotateDirection from "../../../src/common/rotate-direction";
