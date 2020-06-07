@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #202028;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 2em;
+  margin: 0;
+  padding: 0;
+}
+
+div#screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+div#score::before {
+  content: "Score: ";
+}
+
+canvas {
+  border: solid 0.2em #fff;
+  width: 98vw;
+  max-width: 500px;
+}
+
+div#joystick {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 100px;
+  width: 98vw;
+  max-width: 500px;
+  background-color: #404068;
+}
+
+div#joystick div {
+  width: 100px;
+  height: 100px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

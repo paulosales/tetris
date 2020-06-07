@@ -1,7 +1,7 @@
 {
   "name": "tetris",
   "version": "1.0.0",
-  "description": "A JS Tetris game",
+  "description": "A tetris webapp game",
   "main": "src/index.js",
   "repository": "https://github.com/paulosales/tetris.git",
   "author": "Paulo Rogério Sales Santos",

@@ -10,6 +10,26 @@ class Keyboard {
     document.addEventListener("keydown", (event: KeyboardEvent) => {
       this.doKeyDown(event.keyCode);
     });
+
+    document
+      .getElementById("rotate-counterclockwise")
+      .addEventListener("mousedown", () => {
+        this.doKeyDown(KeyboardKey.Q);
+      });
+    document
+      .getElementById("rotate-clockwise")
+      .addEventListener("mousedown", () => {
+        this.doKeyDown(KeyboardKey.W);
+      });
+    document.getElementById("move-left").addEventListener("mousedown", () => {
+      this.doKeyDown(KeyboardKey.LEFT);
+    });
+    document.getElementById("move-down").addEventListener("mousedown", () => {
+      this.doKeyDown(KeyboardKey.DOWN);
+    });
+    document.getElementById("move-right").addEventListener("mousedown", () => {
+      this.doKeyDown(KeyboardKey.RIGHT);
+    });
   }
 
   addKeyboardListener(listener: KeyboardListener): void {
