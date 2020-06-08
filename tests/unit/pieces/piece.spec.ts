@@ -211,4 +211,21 @@ describe("Piece", () => {
       expect(clearArenaSpy).toHaveBeenCalledTimes(1);
     });
   });
+
+  describe("when rotate the I piece in the rightest position and the piece drops down", () => {
+    it("should move to the left to avoid to collide and merge into the arena.", () => {
+      const arena = new Arena();
+      const piece = new PieceI(arena);
+
+      for (let i = 0; i < 6; i++) {
+        piece.onKeyDown(KeyboardKey.RIGHT);
+      }
+
+      piece.onKeyDown(KeyboardKey.Q);
+
+      piece.onTick(1000);
+
+      expect(Arena.prototype.merge).toBeCalledTimes(0);
+    });
+  });
 });
