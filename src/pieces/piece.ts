@@ -91,7 +91,20 @@ abstract class Piece implements KeyboardListener, ClockListener {
   }
 
   private rotate(direction: RotateDirection): void {
+    const originalPosX = this.pos.x;
+
     this.matrix.rotate(direction);
+
+    let offset = 1;
+    while (this.isCollided()) {
+      this.pos.x += offset;
+      offset = -(offset + (offset > 0 ? 1 : -1));
+      if (offset > this.matrix.getDimension().width) {
+        this.matrix.rotate(-direction);
+        this.pos.x = originalPosX;
+        return;
+      }
+    }
   }
 
   onKeyDown(key: KeyboardKey): void {
