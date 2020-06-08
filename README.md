@@ -4,9 +4,7 @@ A Tetris web app game.
 
 ## Demo
 
-A demo of the game can be founded at [http://tetris.paulosales.com.br/](http://tetris.paulosales.com.br/) and also we have embedded live version to taste here:
-
-<embed type="text/html" src="https://tetris.paulosales.com.br/" width="340" height="650">
+A demo of the game can be founded at [http://tetris.paulosales.com.br/](http://tetris.paulosales.com.br/)
 
 ## Tech stack
 
