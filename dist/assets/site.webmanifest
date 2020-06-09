@@ -1,19 +1,36 @@
 {
-  "name": "",
-  "short_name": "",
+  "name": "Tetris",
+  "short_name": "Tetris",
+  "description": "A tetris webapp game",
   "icons": [
     {
-      "src": "/android-chrome-192x192.png",
+      "src": "/assets/android-chrome-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/android-chrome-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/android-chrome-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/android-chrome-512x512.png",
+      "src": "/assets/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "start_url": "/",
+  "theme_color": "#202028",
+  "background_color": "#202028",
   "display": "standalone"
 }
