@@ -211,6 +211,9 @@ abstract class Piece implements KeyboardListener, ClockListener {
       case KeyboardKey.DOWN:
         this.drop();
         break;
+      case KeyboardKey.SPACE:
+        this.rotate(RotateDirection.CLOCKWISE);
+        break;
       case KeyboardKey.W:
         this.rotate(RotateDirection.CLOCKWISE);
         break;

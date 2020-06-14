@@ -197,7 +197,7 @@ describe("Piece", () => {
         piece.onKeyDown(KeyboardKey.RIGHT);
       }
 
-      piece.onKeyDown(KeyboardKey.Q);
+      piece.onKeyDown(KeyboardKey.SPACE);
 
       piece.onTick(1000);
 
