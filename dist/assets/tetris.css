@@ -16,7 +16,7 @@ div#screen {
   flex-direction: column;
   align-items: center;
   width: 100vw;
-  height: 100vh;
+  padding-top: calc(20 * 100 / 12);
 }
 
 div#score::before {
@@ -25,8 +25,8 @@ div#score::before {
 
 canvas {
   border: solid 0.2em #fff;
-  width: 98vw;
-  max-width: 500px;
+  height: calc(100vh - 140px);
+  width: calc(100vh * 12 / 20 - 100px);
 }
 
 div#joystick {
