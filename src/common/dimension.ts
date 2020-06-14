@@ -1,3 +1,6 @@
+/**
+ * The game object dimensions.
+ */
 class Dimension {
   width: number;
   height: number;

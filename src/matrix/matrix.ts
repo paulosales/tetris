@@ -1,15 +1,27 @@
 import Dimension from "../common/dimension";
 import RotateDirection from "../common/rotate-direction";
 
+/**
+ * A bidimensional matrix.
+ */
 class Matrix<T> {
+  //The matrix dimension.
   private dimension: Dimension;
+  //The matrix data.
   private data: T[][];
 
-  getDimension(): Dimension {
+  /**
+   * Retrieves the matrix dimension.
+   */
+  public getDimension(): Dimension {
     return this.dimension;
   }
 
-  setDimension(dimension: Dimension): void {
+  /**
+   * Sets the matrix dimension.
+   * @param dimension The new dimension.
+   */
+  public setDimension(dimension: Dimension): void {
     this.dimension = dimension;
     this.data = [];
     let h = dimension.height;
@@ -26,7 +38,11 @@ class Matrix<T> {
     });
   }
 
-  rotate(direction: RotateDirection): void {
+  /**
+   * Rotates the matrix content.
+   * @param direction The rotation direction.
+   */
+  public rotate(direction: RotateDirection): void {
     //transpose the matrix: Exchange the matrix columns by matrix lines.
     for (let y = 0; y < this.dimension.height; ++y) {
       for (let x = 0; x < y; ++x) {
@@ -46,21 +62,38 @@ class Matrix<T> {
     }
   }
 
-  spliceRows(start: number, deleteCount: number): Array<Array<T>> {
+  /**
+   * Removes rows from the matrix.
+   * @param start initial index of the removed rows.
+   * @param deleteCount Quantity os rows to be deleted.
+   * @returns The deleted rows.
+   */
+  public spliceRows(start: number, deleteCount: number): Array<Array<T>> {
     return this.data.splice(start, deleteCount);
   }
 
-  unshiftRow(row: Array<T>): void {
+  /**
+   * Add one row at the begging of the matrix.
+   * @param row The row to add at the matrix begin.
+   */
+  public unshiftRow(row: Array<T>): void {
     this.data.unshift(row);
   }
 
-  fill(value: T): void {
+  /**
+   * Fill up the matrix content.
+   * @param value The value to fill the matrix content.
+   */
+  public fill(value: T): void {
     this.data.forEach((row) => {
       row.fill(value);
     });
   }
 
-  toString(): string {
+  /**
+   * The string representation of the matrix.
+   */
+  public toString(): string {
     const strRows = new Array<string>();
     this.data.forEach((row) => {
       const strCols = new Array<string>();
@@ -72,11 +105,22 @@ class Matrix<T> {
     return strRows.join("\n");
   }
 
-  get(row: number, col: number): T {
+  /**
+   * Get the data from matrix cell.
+   * @param row The row index of the data.
+   * @param col The column index of the data.
+   */
+  public get(row: number, col: number): T {
     return this.data[row][col];
   }
 
-  set(row: number, col: number, value: T): void {
+  /**
+   * Set data to matrix cell.
+   * @param row The row index of the data cell.
+   * @param col The column index of the data cell.
+   * @param value The value to be setted.
+   */
+  public set(row: number, col: number, value: T): void {
     this.data[row][col] = value;
   }
 }
