@@ -1,6 +1,6 @@
 {
   "name": "tetris",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A tetris webapp game",
   "main": "src/index.js",
   "repository": "https://github.com/paulosales/tetris.git",
