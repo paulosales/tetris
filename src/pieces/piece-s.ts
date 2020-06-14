@@ -10,7 +10,7 @@ class PieceS extends Piece {
    * 0 0 0
    * @param matrix The matrix the will be filled with the piece Z shape representation.
    */
-  shape(matrix: Matrix<number>): void {
+  createShape(matrix: Matrix<number>): void {
     matrix.setDimension(new Dimension(3, 3));
     matrix.set(0, 1, 6);
     matrix.set(0, 2, 6);

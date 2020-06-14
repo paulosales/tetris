@@ -9,7 +9,7 @@ class PieceO extends Piece {
    * 2 2
    * @param matrix The matrix the will be filled with the piece O shape representation.
    */
-  shape(matrix: Matrix<number>): void {
+  createShape(matrix: Matrix<number>): void {
     matrix.setDimension(new Dimension(2, 2));
     matrix.set(0, 0, 2);
     matrix.set(0, 1, 2);

@@ -1,3 +1,6 @@
+/**
+ * The tetris game colors.
+ */
 const COLORS = [
   null,
   "#FF0D72",

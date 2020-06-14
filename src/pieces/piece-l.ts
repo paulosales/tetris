@@ -10,7 +10,7 @@ class PieceL extends Piece {
    * 0 3 3
    * @param matrix The matrix the will be filled with the piece L shape representation.
    */
-  shape(matrix: Matrix<number>): void {
+  createShape(matrix: Matrix<number>): void {
     matrix.setDimension(new Dimension(3, 3));
     matrix.set(0, 1, 3);
     matrix.set(1, 1, 3);
