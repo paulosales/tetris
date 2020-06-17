@@ -33,7 +33,11 @@ yarn build-prod
 
 The bundle will be generated in the folder `dist`.
 
-## Code formatting and pattern adherence
+## Class diagram
+
+![Class diagram](specs/class-diagram.png)
+
+## Code formatting and linting
 
 We have eslint and prettier configured to provides code pattern checking and code formatting.
 
