@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import Runtime from "../../src/runtime";
 import keyboard from "../../src/keyboard/keyboard";
 import clock from "../../src/clock/clock";
@@ -20,7 +21,7 @@ describe("Runtime", () => {
       const canvas = <HTMLCanvasElement>(
         window.document.getElementById("tetris")
       );
-      const runtime = new Runtime(canvas);
+      const runtime = Runtime.getInstance(canvas);
       expect(runtime).not.toBeNull();
     });
   });
@@ -30,7 +31,7 @@ describe("Runtime", () => {
       const canvas = <HTMLCanvasElement>(
         window.document.getElementById("tetris")
       );
-      const runtime = new Runtime(canvas);
+      const runtime = Runtime.getInstance(canvas);
       runtime.run();
 
       expect(Arena).toBeCalledTimes(1);
@@ -43,7 +44,7 @@ describe("Runtime", () => {
       const canvas = <HTMLCanvasElement>(
         window.document.getElementById("tetris")
       );
-      const runtime = new Runtime(canvas);
+      const runtime = Runtime.getInstance(canvas);
       runtime.run();
 
       animationFrameCallback(100);
@@ -57,7 +58,10 @@ describe("Runtime", () => {
       const canvas = <HTMLCanvasElement>(
         window.document.getElementById("tetris")
       );
-      const runtime = new Runtime(canvas);
+
+      const runtime = Runtime.getInstance(canvas);
+      //@ts-ignore
+      runtime.score = 0;
       runtime.run();
 
       runtime.onSweep();
@@ -71,7 +75,9 @@ describe("Runtime", () => {
       const canvas = <HTMLCanvasElement>(
         window.document.getElementById("tetris")
       );
-      const runtime = new Runtime(canvas);
+      const runtime = Runtime.getInstance(canvas);
+      //@ts-ignore
+      runtime.score = 0;
       runtime.run();
 
       runtime.onSweep();
@@ -86,7 +92,7 @@ describe("Runtime", () => {
       const canvas = <HTMLCanvasElement>(
         window.document.getElementById("tetris")
       );
-      const runtime = new Runtime(canvas);
+      const runtime = Runtime.getInstance(canvas);
       runtime.run();
 
       runtime.onSweep();

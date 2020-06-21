@@ -11,11 +11,19 @@ class Runtime implements ClockListener, ArenaListener {
   private context: CanvasRenderingContext2D;
   private arena: Arena;
   private score = 0;
+  private static instance: Runtime = null;
 
-  constructor(canvas: HTMLCanvasElement) {
+  private constructor(canvas: HTMLCanvasElement) {
     this.canvas = canvas;
     this.context = canvas.getContext("2d");
     this.context.scale(20, 20);
+  }
+
+  public static getInstance(canvas: HTMLCanvasElement): Runtime {
+    if (this.instance === null) {
+      this.instance = new Runtime(canvas);
+    }
+    return this.instance;
   }
 
   /**
