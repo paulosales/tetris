@@ -1,6 +1,8 @@
-# tetris - [![Build Status](https://travis-ci.com/paulosales/tetris.svg?branch=dev)](https://travis-ci.com/paulosales/tetris) [![codecov](https://codecov.io/gh/paulosales/tetris/branch/dev/graph/badge.svg)](https://codecov.io/gh/paulosales/tetris)
+<img src="dist/assets/android-chrome-144x144.png" width="110" align="right" />
 
-A Tetris web app game.
+# tetris - [![Build Status](https://travis-ci.com/paulosales/tetris.svg?branch=dev)](https://travis-ci.com/paulosales/tetris) ![Netlify](https://img.shields.io/netlify/09523b34-1688-4f2e-bc15-d8641f848370) [![codecov](https://codecov.io/gh/paulosales/tetris/branch/dev/graph/badge.svg)](https://codecov.io/gh/paulosales/tetris) ![GitHub](https://img.shields.io/github/license/paulosales/tetris)
+
+> A Tetris web app game.
 
 ## Demo
 
