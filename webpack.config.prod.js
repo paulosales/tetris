@@ -1,4 +1,5 @@
 const path = require("path");
+const webpack = require("webpack");
 
 module.exports = {
   entry: "./src/index.ts",
@@ -19,4 +20,9 @@ module.exports = {
   resolve: {
     extensions: [".ts", ".js"],
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      "process.env.PUBLIC_URL": `"https://tetris.paulosales.com.br/"`,
+    }),
+  ],
 };
