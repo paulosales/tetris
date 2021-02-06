@@ -10,7 +10,7 @@ A demo of the game can be founded at [http://tetris.paulosales.com.br/](http://t
 
 ## Play on your mobile
 
-Tetris is a Progressive Web App, so you can install it on your mobile phone e play offline.
+Tetris is a Progressive Web App, so you can install it on your mobile phone and play offline.
 
 The animation below shows how to install the Tetris as a PWA:
 ![Install tetris animation](install-tetris.gif)
