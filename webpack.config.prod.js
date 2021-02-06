@@ -22,7 +22,7 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      "process.env.PUBLIC_URL": `"https://tetris.paulosales.com.br/"`,
+      "process.env.PUBLIC_URL": `"https://tetris.paulosales.com.br"`,
     }),
   ],
 };

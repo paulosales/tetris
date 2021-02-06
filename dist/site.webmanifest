@@ -4,32 +4,32 @@
   "description": "A tetris webapp game",
   "icons": [
     {
-      "src": "favicon-16x16.png",
+      "src": "assets/favicon-16x16.png",
       "sizes": "16x16",
       "type": "image/png"
     },
     {
-      "src": "favicon-32x32.png",
+      "src": "assets/favicon-32x32.png",
       "sizes": "32x32",
       "type": "image/png"
     },
     {
-      "src": "android-chrome-144x144.png",
+      "src": "assets/android-chrome-144x144.png",
       "sizes": "144x144",
       "type": "image/png"
     },
     {
-      "src": "android-chrome-192x192.png",
+      "src": "assets/android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "android-chrome-512x512.png",
+      "src": "assets/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
   ],
-  "start_url": "/",
+  "start_url": ".",
   "theme_color": "#202028",
   "background_color": "#202028",
   "display": "standalone"

@@ -1,5 +1,20 @@
 const cacheName = "tetris-cache-v1";
-const initialCachedFiles = [];
+const initialCachedFiles = [
+  "/",
+  "index.html",
+  "tetris.js",
+  "site.webmanifest",
+  "assets/tetris.css",
+  "assets/favicon.ico",
+  "assets/favicon-16x16.png",
+  "assets/favicon-32x32.png",
+  "assets/android-chrome-144x144.png",
+  "assets/android-chrome-192x192.png",
+  "assets/android-chrome-512x512.png",
+  "assets/apple-touch-icon.png",
+  "assets/font-awesome/css/font-awesome.min.css",
+  "assets/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0",
+];
 
 self.addEventListener("install", (event) => {
   console.log(`Service worker installed.`);
@@ -29,6 +44,7 @@ self.addEventListener("activate", (event) => {
 
 self.addEventListener("fetch", (event) => {
   console.log("fetching " + event.request);
+  console.dir(event.request);
   event.respondWith(
     caches
       .match(event.request)
