@@ -8,12 +8,16 @@
 
 A demo of the game can be founded at [http://tetris.paulosales.com.br/](http://tetris.paulosales.com.br/)
 
-## Play on you mobile
+## Play on your mobile
 
 Tetris is a Progressive Web App, so you can install it on your mobile phone e play offline.
 
 The animation below shows how to install the Tetris as a PWA:
 ![Install tetris animation](install-tetris.gif)
+
+## Code explanation
+
+You wanna know more about how this game was built? Please, visit the article [Designing and creating the Tetris game in Typescript](https://medium.com/@paulosales_17259/designing-and-creating-the-tetris-game-in-typescript-9ab6ee7e5cf1?sk=2f3554fa43abdb0132e5d3275f436050) at Medium.
 
 ## Tech stack
 
@@ -48,7 +52,7 @@ The bundle will be generated in the folder `dist`.
 
 ## Code formatting and linting
 
-We have eslint and prettier configured to provides code pattern checking and code formatting.
+We have Eslint and Prettier configured to provides code pattern checking and code formatting.
 
 To check code pattern adherence type:
 
@@ -66,7 +70,7 @@ Code formatting and pattern adherence commands will be triggered every time you 
 
 ## Testing
 
-We have three test configurations types: Watching tests, Coverage tests, and Debug tests.
+We have three test configuration types: Watching tests, Coverage tests, and Debug tests.
 
 ### Watching tests
 
