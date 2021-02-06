@@ -8,6 +8,13 @@
 
 A demo of the game can be founded at [http://tetris.paulosales.com.br/](http://tetris.paulosales.com.br/)
 
+## Play on you mobile
+
+Tetris is a Progressive Web App, so you can install it on your mobile phone e play offline.
+
+The animation below shows how to install the Tetris as a PWA:
+![Install tetris animation](install-tetris.gif)
+
 ## Tech stack
 
 1. [Typescript](https://www.typescriptlang.org/)
@@ -52,7 +59,7 @@ yarn lint
 To format the code type:
 
 ```bash
-yarn prettier
+yarn format
 ```
 
 Code formatting and pattern adherence commands will be triggered every time you commit to your git repository.
