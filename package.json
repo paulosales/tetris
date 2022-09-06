@@ -8,8 +8,8 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "webpack --config webpack.config.dev.js --env.development",
-    "build-prod": "webpack --config webpack.config.prod.js --env.production",
+    "build": "webpack --config webpack.config.dev.js --env development",
+    "build-prod": "webpack --config webpack.config.prod.js --env production",
     "lint": "eslint src/*.ts",
     "format": "pretty-quick",
     "test": "jest --watchAll true",
